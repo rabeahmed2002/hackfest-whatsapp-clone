@@ -1,3 +1,4 @@
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 import React, { useEffect, useState } from "react";
 import TollIcon from "@mui/icons-material/Toll";
 import InsertCommentIcon from "@mui/icons-material/InsertComment";
@@ -57,9 +58,11 @@ function Sidebar({ currentUser, signOut }) {
   return (
     <div className="sidebar">
       <div className="sidebar-header">
+
         <div className="sidebar-header-img" onClick={signOut}>
           <img src={currentUser?.photoURL} alt="" />
         </div>
+        <ConnectButton />
         <div className="sidebar-header-btn">
           <TollIcon />
           <InsertCommentIcon />
